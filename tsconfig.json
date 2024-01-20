@@ -1,16 +1,30 @@
 {   
-    "include": ["*.ts"],
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "./*.ts", "./*.tsx", "./*.d.ts"],
     "compilerOptions": {
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "module": "ES2020",
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "skipLibCheck": true,
+
+        /* Bundler mode */
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "preserve",
+
         "allowJs": true,
         "allowUnusedLabels": true,
         "allowSyntheticDefaultImports": true,
         "exactOptionalPropertyTypes": true,
-        "moduleResolution": "Node",
+
         "noFallthroughCasesInSwitch": true,
         "noImplicitReturns": true,
         "noImplicitAny": true,
         "noImplicitThis": true,
+        "noUnusedLocals": true,
         "strictNullChecks": true,
-        "target": "ESNext",
     }
 }
